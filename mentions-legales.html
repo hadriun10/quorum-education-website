@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales - Quorum Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html"><img src="logo-quorum.png" alt="Quorum Education" class="logo"></a>
+            <button class="contact-button" onclick="openModal()">Nous contacter</button>
+        </div>
+        <div class="header-bar"></div>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="legal-page">
+        <div class="legal-container">
+            <h1 class="legal-title">Mentions légales</h1>
+            <p class="legal-date">Dernière mise à jour : janvier 2025</p>
+
+            <div class="legal-section">
+                <h2 class="legal-section-title">1. Éditeur du site</h2>
+                <p class="legal-text">
+                    Le site <strong>quorumeducation.com</strong> est édité par Quorum Education, société spécialisée dans l'acquisition étudiante pour les établissements d'enseignement supérieur.
+                </p>
+                <p class="legal-text">
+                    <strong>Contact :</strong><br>
+                    Email : contact@quorumeducation.com
+                </p>
+            </div>
+
+            <div class="legal-section">
+                <h2 class="legal-section-title">2. Directeur de publication</h2>
+                <p class="legal-text">
+                    Le directeur de la publication est le représentant légal de Quorum Education.
+                </p>
+            </div>
+
+            <div class="legal-section">
+                <h2 class="legal-section-title">3. Hébergement</h2>
+                <p class="legal-text">
+                    Le site est hébergé par un prestataire technique conforme aux normes de sécurité et de protection des données en vigueur.
+                </p>
+            </div>
+
+            <div class="legal-section">
+                <h2 class="legal-section-title">4. Propriété intellectuelle</h2>
+                <p class="legal-text">
+                    L'ensemble des contenus présents sur ce site (textes, images, logos, graphismes) sont la propriété exclusive de Quorum Education, sauf mention contraire. Toute reproduction, représentation, modification ou adaptation sans autorisation préalable est interdite et constitue une contrefaçon passible de sanctions pénales.
+                </p>
+            </div>
+
+            <div class="legal-section">
+                <h2 class="legal-section-title">5. Données personnelles</h2>
+                <p class="legal-text">
+                    Conformément à la réglementation en vigueur sur la protection des données personnelles (RGPD), les informations collectées sur ce site font l'objet d'un traitement strictement encadré. Pour plus d'informations, consultez notre <a href="confidentialite.html" class="legal-link">politique de confidentialité</a>.
+                </p>
+            </div>
+
+            <div class="legal-section">
+                <h2 class="legal-section-title">6. Responsabilité</h2>
+                <p class="legal-text">
+                    Quorum Education s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Cependant, l'entreprise ne peut garantir l'exhaustivité, la précision ou l'actualité de l'ensemble des informations mises à disposition.
+                </p>
+                <p class="legal-text">
+                    Quorum Education ne saurait être tenue responsable des dommages directs ou indirects résultant de l'utilisation du site ou de l'impossibilité de l'utiliser.
+                </p>
+            </div>
+
+            <div class="legal-section">
+                <h2 class="legal-section-title">7. Liens externes</h2>
+                <p class="legal-text">
+                    Le site peut contenir des liens vers des sites externes. Quorum Education n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou leur accessibilité.
+                </p>
+            </div>
+
+            <div class="legal-section">
+                <h2 class="legal-section-title">8. Droit applicable</h2>
+                <p class="legal-text">
+                    Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents.
+                </p>
+            </div>
+
+            <div class="legal-section">
+                <h2 class="legal-section-title">9. Contact</h2>
+                <p class="legal-text">
+                    Pour toute question relative aux présentes mentions légales, vous pouvez nous contacter à l'adresse suivante : <a href="mailto:contact@quorumeducation.com" class="legal-link">contact@quorumeducation.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column footer-logo">
+                <img src="logo-quorum.png" alt="Quorum Education" class="footer-logo-img">
+            </div>
+            
+            <div class="footer-column footer-quote">
+                <p class="footer-quote-text">"Intelligence consists in ignoring things that are irrelevant."</p>
+                <p class="footer-quote-author">- Nassim Nicholas Taleb</p>
+            </div>
+            
+            <div class="footer-column footer-info">
+                <p class="footer-copyright">Quorum Education © 2025</p>
+                <p class="footer-links">
+                    <a href="mentions-legales.html" class="footer-link">Mentions légales</a><br>
+                    <a href="confidentialite.html" class="footer-link">Confidentialité</a>
+                </p>
+                <p class="footer-email">contact@quorumeducation.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <p class="modal-text">Nous sommes joignable par mail :</p>
+            <a href="mailto:contact@quorumeducation.com" class="modal-email">contact@quorumeducation.com</a>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('contactModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+
