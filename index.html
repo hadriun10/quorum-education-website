@@ -14,7 +14,7 @@
     <header class="header">
         <div class="header-container">
             <img src="logo-quorum.png" alt="Quorum Education" class="logo">
-            <button class="contact-button">Nous contacter</button>
+            <button class="contact-button" onclick="openModal()">Nous contacter</button>
         </div>
         <div class="header-bar"></div>
     </header>
@@ -22,27 +22,33 @@
     <!-- SECTION 1 — HERO -->
     <section class="hero">
         <div class="hero-container">
-            <p class="hero-badge">Pilotée par des CMO issus de l'enseignement supérieur</p>
+            <p class="hero-badge">Boutique d'acquisition dédiée à l'enseignement privé.</p>
             
-            <h1 class="hero-title">Nous trouvons les futurs étudiants des plus grands groupes d'éducation.</h1>
+            <h1 class="hero-title">Des inscriptions prévisibles pour les groupes de l'éducation supérieur en croissance</h1>
             
-            <p class="hero-subtitle">Acquisition étudiante basée sur la data, l'optimisation du funnel d'inscription, et des campagnes pilotées par la performance réelle.</p>
+            <img src="école contrastée.png" alt="École" class="hero-image">
+            
+            <p class="hero-subtitle">Quorum Education accompagne les établissements post-bac dans la génération d'une demande qualifiée, exclusive et mesurable. Nos clients obtiennent en moyenne :</p>
             
             <div class="hero-proofs">
                 <div class="proof-item">
                     <span class="proof-number">12 500</span>
-                    <span class="proof-text">prospects qualifiés générés en 2024</span>
+                    <span class="proof-text">prospects qualifiés par an</span>
                 </div>
                 <div class="proof-item">
-                    <span class="proof-number">2,8 %</span>
-                    <span class="proof-text">de taux moyen d'inscription réelle</span>
+                    <span class="proof-number">2,8%</span>
+                    <span class="proof-text">de taux d'inscription sur ces prospects</span>
                 </div>
                 <div class="proof-item">
-                    <span class="proof-text">Collaboration avec groupes d'enseignement supérieur & réseaux d'écoles spécialisés</span>
+                    <span class="proof-number">7,8</span>
+                    <span class="proof-text">de ROI sur leur investissement en nous</span>
                 </div>
             </div>
             
-            <a href="#contact" class="cta-button">Obtenir des leads exclusif</a>
+            <div class="cta-wrapper">
+                <button class="cta-button" onclick="openModal()">Entrer en relation</button>
+                <p class="hero-exclusivity">Nous travaillons avec une seule école par secteur</p>
+            </div>
         </div>
     </section>
 
@@ -74,9 +80,58 @@
                 </div>
             </div>
             
-            <p class="method-disclaimer">Nous opérons pour des groupes d'enseignement reconnus, sous NDA lorsque requis.</p>
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column footer-logo">
+                <img src="logo-quorum.png" alt="Quorum Education" class="footer-logo-img">
+            </div>
+            
+            <div class="footer-column footer-quote">
+                <p class="footer-quote-text">"Intelligence consists in ignoring things that are irrelevant."</p>
+                <p class="footer-quote-author">- Nassim Nicholas Taleb</p>
+            </div>
+            
+            <div class="footer-column footer-info">
+                <p class="footer-copyright">Quorum Education © 2025</p>
+                <p class="footer-links">
+                    <a href="#" class="footer-link">Mentions légales</a><br>
+                    <a href="#" class="footer-link">Confidentialité</a>
+                </p>
+                <p class="footer-email">contact@quorumeducation.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <p class="modal-text">Nous sommes joignable par mail :</p>
+            <a href="mailto:contact@quorumeducation.com" class="modal-email">contact@quorumeducation.com</a>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('contactModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+
+        // Fermer le modal en cliquant en dehors
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
 

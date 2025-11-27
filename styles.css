@@ -33,14 +33,14 @@ body {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 14px 40px;
+    padding: 8px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    height: 70px;
+    height: 65px;
     width: auto;
 }
 
@@ -72,8 +72,8 @@ body {
 /* SECTION 1 — HERO */
 .hero {
     background-color: var(--blue-night);
-    padding: 120px 40px;
-    padding-top: 120px; /* ~100px pour le header + espace réduit */
+    padding: 80px 40px;
+    padding-top: 90px; /* ~82px pour le header + espace réduit */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -85,7 +85,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 20px;
 }
 
 .hero-badge {
@@ -100,12 +100,22 @@ body {
 }
 
 .hero-title {
-    font-size: 56px;
+    font-size: 42px;
     font-weight: 500;
     line-height: 1.2;
     color: var(--white);
     max-width: 900px;
     letter-spacing: -0.5px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center 60%;
+    border-radius: 16px !important;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .hero-subtitle {
@@ -114,7 +124,7 @@ body {
     line-height: 1.5;
     color: var(--white);
     opacity: 0.8;
-    max-width: 800px;
+    max-width: 1000px;
     margin-top: 8px;
 }
 
@@ -122,15 +132,27 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    margin-top: 24px;
-    padding-top: 48px;
-    border-top: 1px solid rgba(211, 217, 226, 0.2);
+    margin-top: 4px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.hero-proofs-intro {
+    grid-column: 1 / -1;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--white);
+    opacity: 0.8;
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-family: 'Inter', sans-serif;
 }
 
 .proof-item {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .proof-number {
@@ -162,6 +184,8 @@ body {
     margin-top: 16px;
     transition: background-color 0.2s, color 0.2s;
     border-radius: 0;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
 }
 
 .cta-button:hover {
@@ -169,10 +193,27 @@ body {
     color: var(--white);
 }
 
+.cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+}
+
+.hero-exclusivity {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--white);
+    opacity: 0.7;
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-family: 'Inter', sans-serif;
+}
+
 /* SECTION 2 — MÉTHODE */
 .method {
     background-color: var(--white);
-    padding: 120px 40px;
+    padding: 80px 40px;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -184,7 +225,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 40px;
 }
 
 .method-title {
@@ -245,6 +286,170 @@ body {
     padding-top: 32px;
     border-top: 1px solid var(--gray-structure);
     margin-top: 16px;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--blue-night);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    opacity: 0.7;
+}
+
+.modal-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--blue-night);
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.modal-email {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--blue-night);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.modal-email:hover {
+    opacity: 0.7;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #000000;
+    padding: 60px 40px;
+    color: var(--white);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    align-items: start;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-logo-img {
+    height: 150px;
+    width: auto;
+}
+
+.footer-company-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-name-main {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.footer-name-sub {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--white);
+    opacity: 0.8;
+    line-height: 1.2;
+}
+
+.footer-quote {
+    align-items: center;
+    text-align: center;
+}
+
+.footer-quote-text {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.footer-quote-author {
+    font-size: 14px;
+    color: var(--white);
+    opacity: 0.8;
+}
+
+.footer-info {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    font-size: 14px;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.footer-link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+}
+
+.footer-email {
+    font-size: 14px;
+    color: var(--white);
 }
 
 /* Responsive */
@@ -309,6 +514,28 @@ body {
     
     .proof-number {
         font-size: 28px;
+    }
+    
+    .footer {
+        padding: 40px 24px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+    }
+    
+    .footer-quote {
+        text-align: center;
+    }
+    
+    .footer-info {
+        align-items: center;
+        text-align: center;
     }
 }
 
