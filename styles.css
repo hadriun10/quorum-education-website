@@ -565,6 +565,13 @@ body {
         padding-top: 100px; /* Ajusté pour le nouveau header */
     }
     
+    .hero-image {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        object-position: center 60%;
+    }
+    
     .method {
         padding: 80px 24px;
     }
