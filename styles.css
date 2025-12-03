@@ -131,7 +131,7 @@ body {
 
 .hero-proofs {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin-top: 4px;
     padding-top: 0;
@@ -276,6 +276,26 @@ body {
     color: var(--white);
     opacity: 0.7;
     line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.method-card-text:last-child {
+    margin-bottom: 0;
+}
+
+.method-card-list {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--white);
+    opacity: 0.7;
+    line-height: 1.6;
+    margin-left: 20px;
+    margin-bottom: 12px;
+    list-style-type: disc;
+}
+
+.method-card-list li {
+    margin-bottom: 8px;
 }
 
 .method-disclaimer {
