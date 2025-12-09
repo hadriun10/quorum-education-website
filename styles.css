@@ -61,7 +61,7 @@ body {
     font-family: 'Inter', sans-serif;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
-    border-radius: 0;
+    border-radius: 8px !important;
 }
 
 .contact-button:hover {
@@ -116,7 +116,7 @@ body {
     object-position: center 60%;
     border-radius: 16px !important;
     margin-top: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .hero-subtitle {
@@ -141,7 +141,7 @@ body {
 
 .hero-proofs-intro {
     grid-column: 1 / -1;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     color: var(--white);
     opacity: 1;
@@ -184,7 +184,7 @@ body {
     width: fit-content;
     margin-top: 16px;
     transition: background-color 0.2s, color 0.2s;
-    border-radius: 0;
+    border-radius: 8px !important;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
 }
@@ -234,7 +234,7 @@ body {
     font-weight: 500;
     line-height: 1.2;
     color: var(--blue-night);
-    max-width: 900px;
+    max-width: 1200px;
     letter-spacing: -0.5px;
 }
 
